@@ -12,7 +12,6 @@ def test_cookiecuttering(tmpdir):
     assert package_name and isinstance(package_name, str)
 
     output_dir = tmpdir.mkdir(package_name)
-    output_dir_name = output_dir.dirname
     subprocess.check_call([
         'cookiecutter',
         'https://github.com/menzenski/cookiecutter-python-cli',
@@ -21,19 +20,21 @@ def test_cookiecuttering(tmpdir):
         '--no-input',
         '--overwrite-if-exists',
         '--output-dir',
-        output_dir_name,
+        str(output_dir),
     ])
+
+    assert 0
 
     subprocess.check_call([
         'make',
         '-C',
-        output_dir_name,
+        str(output_dir),
         'setup',
     ])
 
     subprocess.check_call([
         'make',
         '-C',
-        output_dir_name,
+        str(output_dir),
         'test',
     ])
