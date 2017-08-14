@@ -14,7 +14,7 @@ activate:
 	pipenv shell -c
 
 test:
-	pipenv run -- py.test tests -s -v
+	pipenv run -- py.test tests -s -v --basetemp=./.temp/
 
 .PHONY: help activate test
 
