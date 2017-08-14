@@ -9,6 +9,7 @@ def test_cookiecuttering(tmpdir):
     with open(os.path.join(root_dir, 'cookiecutter.json')) as config_file:
         config_data = json.load(config_file)
         package_name = config_data['package_name']
+
     assert package_name and isinstance(package_name, str)
 
     output_dir = tmpdir.mkdir(package_name)
@@ -21,19 +22,22 @@ def test_cookiecuttering(tmpdir):
         '--overwrite-if-exists',
         '--output-dir',
         # h/t https://gist.github.com/bryder/d11537e82c3487e310ed
-        str(output_dir),
+        output_dir.strpath,
+        # str(output_dir),
     ])
 
     subprocess.check_call([
         'make',
         '-C',
-        str(output_dir),
+        output_dir.strpath,
+        # str(output_dir),
         'setup',
     ])
 
     subprocess.check_call([
         'make',
         '-C',
-        str(output_dir),
+        output_dir.strpath,
+        # str(output_dir),
         'test',
     ])
