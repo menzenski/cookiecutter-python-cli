@@ -14,7 +14,7 @@ activate:
 	pipenv shell -c
 
 test:
-	pipenv run -- py.test tests -s -v --flake8
+	pipenv run -- py.test tests -s -v --flake8 --flake8-ignore ./\{\{\ cookiecutter.repo_name\ \}\}/
 
 .PHONY: help activate test
 
