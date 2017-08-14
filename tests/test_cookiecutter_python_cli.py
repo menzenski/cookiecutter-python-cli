@@ -23,8 +23,6 @@ def test_cookiecuttering(tmpdir):
         str(output_dir),
     ])
 
-    assert 0
-
     subprocess.check_call([
         'make',
         '-C',
