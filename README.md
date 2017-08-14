@@ -1,9 +1,12 @@
+# Python Cookiecutter CLI with Pipfile and pipenv
+
+[![Build Status](https://travis-ci.org/menzenski/cookiecutter-python-cli.svg?branch=develop)](https://travis-ci.org/menzenski/cookiecutter-python-cli) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/menzenski/cookiecutter-python-cli/issues) [![license](https://img.shields.io/github/license/menzenski/cookiecutter-python-cli.svg?style=flat)](https://github.com/menzenski/cookiecutter-python-cli/blob/develop/LICENSE.md)
+
 ## What is this?
 
 A default template for a new CLI project, written in Python, to be used
-with the [cookiecutter](https://cookiecutter.readthedocs.io) utility. 
+with the [cookiecutter](https://cookiecutter.readthedocs.io) utility.
 Deals with all the boilerplate involved in the setuptools setup, etc.
-
 
 ## How do I use this?
 
@@ -14,7 +17,7 @@ Here's my preferred path to bliss:
 2. Now install Cookiecutter:
    `$ pipsi install cookiecutter`.
 3. Now use Cookiecutter to create your brand new project:
-   `$ cookiecutter https://github.com/nvie/cookiecutter-python-cli.git`
+   `$ cookiecutter https://github.com/menzenski/cookiecutter-python-cli.git`
 
 
 ## How to answer these questions?
