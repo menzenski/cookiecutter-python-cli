@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5a41bdcd8e3b6689f4111aab2cc5c77d166df48415b6ff1cd0fa99ba9c2f0547"
+            "sha256": "bad26084715546754d39d2710b39c005eccf093eae4e4fd32c42ea743a665d38"
         },
         "requires": {},
         "sources": [
@@ -40,10 +40,6 @@
             "hash": "sha256:7d95c48717c725580b4ea6d80a7256479990ab8309003e60695ea1877c296fc9",
             "version": "==1.5.1"
         },
-        "flake8": {
-            "hash": "sha256:f1a9d8886a9cbefb52485f4f4c770832c7fb569c084a9a314fb1eaa37c0c2c86",
-            "version": "==3.4.1"
-        },
         "future": {
             "hash": "sha256:e39ced1ab767b5936646cedba8bcce582398233d6a627067d4c6a454c90cfedb",
             "version": "==0.16.0"
@@ -51,10 +47,6 @@
         "jinja2-time": {
             "hash": "sha256:d3eab6605e3ec8b7a0863df09cc1d23714908fa61aa6986a845c20ba488b4efa",
             "version": "==0.2.0"
-        },
-        "mccabe": {
-            "hash": "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42",
-            "version": "==0.6.1"
         },
         "poyo": {
             "hash": "sha256:230ec11c2f35a23410c1f0e474f09fa4e203686f40ab3adca7b039c845d8c325",
@@ -64,21 +56,9 @@
             "hash": "sha256:2ccb79b01769d99115aa600d7eed99f524bf752bba8f041dc1c184853514655a",
             "version": "==1.4.34"
         },
-        "pycodestyle": {
-            "hash": "sha256:6c4245ade1edfad79c3446fadfc96b0de2759662dc29d07d80a6f27ad1ca6ba9",
-            "version": "==2.3.1"
-        },
-        "pyflakes": {
-            "hash": "sha256:cc5eadfb38041f8366128786b4ca12700ed05bbf1403d808e89d57d67a3875a7",
-            "version": "==1.5.0"
-        },
         "pytest": {
             "hash": "sha256:66f332ae62593b874a648b10a8cb106bfdacd2c6288ed7dec3713c3a808a6017",
             "version": "==3.0.7"
-        },
-        "pytest-flake8": {
-            "hash": "sha256:bf4a9b3b8ca699cf2f84492ec491e4e057ba9af8bce1aec7fd9095b6d4d2d946",
-            "version": "==0.6"
         },
         "pytest-logging": {
             "hash": "sha256:cec5c85ecf18aab7b2ead5498a31b9f758680ef5a902b9054ab3f2bdbb77c896",
