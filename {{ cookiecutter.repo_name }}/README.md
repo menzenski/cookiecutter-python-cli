@@ -17,5 +17,5 @@ Simply run:
 
 To use it:
 
-    $ {{ cookiecutter.script_name }} --help
+    $ make help
 

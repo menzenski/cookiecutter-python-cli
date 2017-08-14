@@ -1,20 +1,27 @@
 """
 {{ cookiecutter.project_short_description }}
 """
-from setuptools import find_packages, setup
+import os
+import os.path
+from setuptools import setup
 
-dependencies = ['click']
+here = os.path.abspath(os.path.dirname(__file__))
+
+about = {}
+with open(os.path.join(here, '{{ cookiecutter.package_name }}', '__about__.py')) as about_file:
+    exec(about_file.read(), about)
 
 setup(
     name='{{ cookiecutter.pypi_name }}',
-    version='{{ cookiecutter.version }}',
-    url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
-    license='BSD',
-    author='{{ cookiecutter.full_name }}',
-    author_email='{{ cookiecutter.email }}',
-    description='{{ cookiecutter.project_short_description }}',
+    version=about['__version__'],
+    url=about['__version__'],
+    license=about['__license__'],
+    author=about['__author__'],
+    author_email=about['__author_email__'],
+    maintainer=about['__maintainer__'],
+    maintainer_email=about['__maintainer_email__'],
+    description=about['__description__'],
     long_description=__doc__,
-    packages=find_packages(exclude=['tests']),
     include_package_data=True,
     zip_safe=False,
     platforms='any',
@@ -44,5 +51,7 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3',
         'Topic :: Software Development :: Libraries :: Python Modules',
-    ]
+    ],
+    setup_requires=['pytest-runner'],
+    tests_requires=['pytest'],
 )
