@@ -20,6 +20,7 @@ def test_cookiecuttering(tmpdir):
         '--no-input',
         '--overwrite-if-exists',
         '--output-dir',
+        # h/t https://gist.github.com/bryder/d11537e82c3487e310ed
         str(output_dir),
     ])
 
