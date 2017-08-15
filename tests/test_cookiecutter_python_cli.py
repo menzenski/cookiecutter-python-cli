@@ -13,12 +13,7 @@ def test_cookiecuttering(monkeypatch, tmpdir):
         package_name = config_data['package_name']
     assert package_name and isinstance(package_name, str)
 
-    subprocess.check_call([
-        'make',
-        'setup',
-    ])
-
-    monkeypatch.chdir(tmpdir)
+    monkeypatch.chdir(root_dir)
 
     subprocess.check_call([
         'cookiecutter',
