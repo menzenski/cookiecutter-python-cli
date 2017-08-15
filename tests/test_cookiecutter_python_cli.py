@@ -14,16 +14,19 @@ def test_cookiecuttering(monkeypatch, tmpdir):
     assert package_name and isinstance(package_name, str)
 
     subprocess.check_call([
+        'make',
+        'setup',
+    ])
+
+    monkeypatch.chdir(tmpdir)
+
+    subprocess.check_call([
         'cookiecutter',
         'https://github.com/menzenski/cookiecutter-python-cli',
         '--checkout',
         'pipfile',
         '--no-input',
         '--overwrite-if-exists',
-        '--output-dir',
-        # h/t https://gist.github.com/bryder/d11537e82c3487e310ed
-        tmpdir.strpath,
-        # str(output_dir),
     ])
 
     repo_dir = tmpdir.join(repo_name)
