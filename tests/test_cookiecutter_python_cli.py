@@ -19,11 +19,11 @@ def test_cookiecuttering(monkeypatch, tmpdir):
         'python3',
         '-m',
         'cookiecutter',
+        '--',
         'https://github.com/menzenski/cookiecutter-python-cli',
-        '--checkout',
-        'pipfile',
-        '--no-input',
-        '--overwrite-if-exists',
+        '--checkout=pipfile',
+        '--no-input=True',
+        '--overwrite-if-exists=True',
     ])
 
     tmpdir.join(repo_name)
