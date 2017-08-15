@@ -26,9 +26,9 @@ def test_cookiecuttering(monkeypatch, tmpdir):
         '--overwrite-if-exists',
     ])
 
-    repo_dir = tmpdir.join(repo_name)
+    tmpdir.join(repo_name)
 
-    monkeypatch.chdir(repo_dir)
+    monkeypatch.chdir(repo_name)
 
     subprocess.check_call([
         'make',
