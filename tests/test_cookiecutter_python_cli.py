@@ -16,6 +16,8 @@ def test_cookiecuttering(monkeypatch, tmpdir):
     monkeypatch.chdir(root_dir)
 
     subprocess.check_call([
+        'python3',
+        '-m',
         'cookiecutter',
         'https://github.com/menzenski/cookiecutter-python-cli',
         '--checkout',
