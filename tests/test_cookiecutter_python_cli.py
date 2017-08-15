@@ -4,7 +4,7 @@ import os.path
 import subprocess
 
 
-def test_cookiecuttering(tmpdir):
+def test_cookiecuttering(monkeypatch, tmpdir):
     root_dir = os.path.join(os.path.dirname(__file__), os.pardir)
 
     with open(os.path.join(root_dir, 'cookiecutter.json')) as config_file:
@@ -28,18 +28,14 @@ def test_cookiecuttering(tmpdir):
 
     repo_dir = tmpdir.join(repo_name)
 
+    monkeypatch.chdir(repo_dir)
+
     subprocess.check_call([
         'make',
-        '-C',
-        repo_dir.strpath,
-        # str(output_dir),
         'setup',
     ])
 
     subprocess.check_call([
         'make',
-        '-C',
-        repo_dir.strpath,
-        # str(output_dir),
         'test',
     ])
