@@ -1,3 +1,4 @@
+import cookiecutter.main as cookiecutter
 import json
 import os
 import os.path
@@ -15,16 +16,13 @@ def test_cookiecuttering(monkeypatch, tmpdir):
 
     monkeypatch.chdir(root_dir)
 
-    subprocess.check_call([
-        'python3',
-        '-m',
-        'cookiecutter',
-        '--',
+    cookiecutter.cookiecutter(
         'https://github.com/menzenski/cookiecutter-python-cli',
-        '--checkout=pipfile',
-        '--no-input=True',
-        '--overwrite-if-exists=True',
-    ])
+        checkout='pipfile',
+        no_input=True,
+        overwrite_if_exists=True,
+        default_config=True
+        )
 
     tmpdir.join(repo_name)
 
