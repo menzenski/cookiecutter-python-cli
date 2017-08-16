@@ -18,11 +18,8 @@ def test_cookiecuttering(monkeypatch, tmpdir):
 
     cookiecutter.cookiecutter(
         'https://github.com/menzenski/cookiecutter-python-cli',
-        checkout='pipfile',
-        no_input=True,
-        overwrite_if_exists=True,
-        default_config=True
-        )
+        checkout='pipfile', no_input=True, overwrite_if_exists=True,
+        default_config=True)
 
     tmpdir.join(repo_name)
 
