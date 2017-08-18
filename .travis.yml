@@ -10,4 +10,4 @@ before_install: sudo apt-get install git-all
 # command to install dependencies
 install: make setup
 # # command to run tests
-script: make test
+script: make tox-test

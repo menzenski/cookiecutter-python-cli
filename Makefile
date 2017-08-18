@@ -16,5 +16,8 @@ activate:
 test:
 	pipenv run -- py.test tests -s -v
 
-.PHONY: help activate test
+tox-test:
+	tox -e $(echo py$TRAVIS_PYTHON_VERSION | tr -d .)
+
+.PHONY: help activate test tox-test
 
