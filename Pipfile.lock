@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "bad26084715546754d39d2710b39c005eccf093eae4e4fd32c42ea743a665d38"
+            "sha256": "1293d3fde42b92d020cd6b37a87cbd4ee241cd5f7e23da040a7a99db5e95bbe3"
         },
         "requires": {},
         "sources": [
@@ -48,6 +48,10 @@
             "hash": "sha256:d3eab6605e3ec8b7a0863df09cc1d23714908fa61aa6986a845c20ba488b4efa",
             "version": "==0.2.0"
         },
+        "pluggy": {
+            "hash": "sha256:d2766caddfbbc8ef641d47da556d2ae3056860ce4d553aa04009e42b76a09951",
+            "version": "==0.4.0"
+        },
         "poyo": {
             "hash": "sha256:230ec11c2f35a23410c1f0e474f09fa4e203686f40ab3adca7b039c845d8c325",
             "version": "==0.4.1"
@@ -75,6 +79,14 @@
         "six": {
             "hash": "sha256:0ff78c403d9bccf5a425a6d31a12aa6b47f1c21ca4dc2573a7e2f32a97335eb1",
             "version": "==1.10.0"
+        },
+        "tox": {
+            "hash": "sha256:a7682ef031df3b2b170b55dbf896b248c0484e70769f28295e30e8b60376f1fa",
+            "version": "==2.8.0rc1"
+        },
+        "virtualenv": {
+            "hash": "sha256:39d88b533b422825d644087a21e78c45cf5af0ef7a99a1fc9fbb7b481e5c85b0",
+            "version": "==15.1.0"
         },
         "whichcraft": {
             "hash": "sha256:cd0e10b58960ab877d9f273cd28788730936c3cdaceec2dafad97c7cf3067d46",
